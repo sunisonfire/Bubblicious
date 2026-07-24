@@ -1,6 +1,6 @@
 # 🐾 Bubblicious — Sistema Automatizado de Pedidos para Cafetería
 > **Automatización de pedidos e integración de cocina mediante n8n, Telegram Bot API y Google Sheets.**
-
+sheets: https://docs.google.com/spreadsheets/d/1qJi4nragkXleTPK5rgU2Kd1f-gvQ8lW8lhr7XYEYb7Y/edit?usp=sharing
 ---
 
 ## 📌 Problemática y Solución
