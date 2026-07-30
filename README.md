@@ -1,4 +1,4 @@
-<img width="917" height="280" alt="image" src="https://github.com/user-attachments/assets/1ce93d51-809f-4dcb-8be1-2c7dd51340da" /># 🐾 Bubblicious — Sistema Automatizado de Pedidos para Cafetería
+# 🐾 Bubblicious — Sistema Automatizado de Pedidos para Cafetería
 > **Automatización de pedidos e integración de cocina mediante n8n, Telegram Bot API y Google Sheets.**
 sheets: https://docs.google.com/spreadsheets/d/1qJi4nragkXleTPK5rgU2Kd1f-gvQ8lW8lhr7XYEYb7Y/edit?usp=sharing
 > bot delivery: t.me/catfeteria_bot
