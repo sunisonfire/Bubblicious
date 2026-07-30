@@ -1,9 +1,61 @@
-# 🐾 Bubblicious — Sistema Automatizado de Pedidos para Cafetería
+<img width="917" height="280" alt="image" src="https://github.com/user-attachments/assets/1ce93d51-809f-4dcb-8be1-2c7dd51340da" /># 🐾 Bubblicious — Sistema Automatizado de Pedidos para Cafetería
 > **Automatización de pedidos e integración de cocina mediante n8n, Telegram Bot API y Google Sheets.**
 sheets: https://docs.google.com/spreadsheets/d/1qJi4nragkXleTPK5rgU2Kd1f-gvQ8lW8lhr7XYEYb7Y/edit?usp=sharing
 > bot delivery: t.me/catfeteria_bot
 > bot cocina: t.me/BoobieAlert_bot
 ---
+# Update: Examen 1
+
+## Objetivo
+
+Se implementó una mejora en el flujo de automatización del bot de pedidos desarrollado en n8n, incorporando una lógica de control de inventario y notificaciones automáticas para la administración.
+
+## Funcionalidades implementadas
+
+### 1. Descuento automático de inventario
+
+Una vez que el cliente confirma su pedido y este se registra correctamente, el sistema descuenta automáticamente la cantidad comprada del stock disponible en la hoja **MENU** de Google Sheets.
+
+### 2. Detección de stock crítico
+
+Después de actualizar el inventario, el flujo verifica si el nuevo stock del producto es menor o igual a **3 unidades** mediante un nodo **IF**.
+
+### 3. Notificación automática al administrador
+
+Cuando un producto alcanza un stock crítico, el sistema envía automáticamente un mensaje mediante el bot de Telegram de administración con el siguiente formato:
+
+> ⚠️ ALERTA DE STOCK
+> El producto **[Nombre del producto]** solo tiene **[Cantidad]** unidades disponibles. Favor reabastecer.
+
+De esta manera, el personal de cocina o el administrador recibe una alerta antes de que el producto se agote completamente.
+
+### 4. Actualización automática de productos agotados
+
+Cuando el stock llega a **0**, el sistema identifica el producto como agotado y actualiza automáticamente la información correspondiente en la hoja **MENU**, evitando que continúe apareciendo como disponible para futuras compras.
+
+## Archivos actualizados
+
+* Workflow actualizado (`.json`) con la lógica de inventario y alertas.
+* Documento `README.md` actualizado con la explicación de la implementación.
+
+## Evidencias
+
+Para demostrar el correcto funcionamiento del examen se anexan las siguientes evidencias:
+
+<img width="1197" height="384" alt="image" src="https://github.com/user-attachments/assets/1bb2a9b4-86b8-46bd-906c-d976b30bdd8c" />
+
+
+
+2. Captura de Telegram donde se observa la alerta enviada automáticamente al administrador.
+<img width="487" height="80" alt="image" src="https://github.com/user-attachments/assets/185b2e6b-ed4e-4a01-89b3-044c0ff21e55" />
+
+3. Captura de Google Sheets evidenciando la actualización del stock después de un pedido exitoso y, cuando corresponde, el estado de producto agotado.
+<img width="905" height="277" alt="image" src="https://github.com/user-attachments/assets/b6639f3a-96f9-4da6-bb98-0ac3b4b22823" />
+
+
+## Resultado
+
+Con esta actualización el sistema no solo administra el inventario automáticamente, sino que también informa de manera proactiva cuando un producto está próximo a agotarse, permitiendo una reposición oportuna y mejorando la gestión de la cafetería.
 
 ## 📌 Problemática y Solución
 
